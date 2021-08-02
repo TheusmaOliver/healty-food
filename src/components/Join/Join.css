@@ -1,0 +1,74 @@
+
+#join {
+    height: 100vh;
+}
+
+.container-join{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-join .bloco-email{
+    padding: 0 4rem 0 7rem;
+}
+
+.container-join .bloco-email h2{
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 9rem 0 0;
+}
+
+.container-join .bloco-email .getEmail{
+    margin-top: 2rem;
+}
+
+.container-join .bloco-email input{
+    width: 65%;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--secondary-color);
+    outline: none;
+    margin-right: 1rem;
+}
+
+
+.container-join .bloco-email button{
+    width: 15%;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: var(--primary-color);
+}
+
+@media (max-width:768px){
+    #join{
+        height: 50vh;
+    }
+    .container-join img{
+        display: none;
+    }
+    .container-join .bloco-email{
+        padding: 0;
+        text-align: center;
+    }
+    .container-join .bloco-email h2{
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .container-join .bloco-email input{
+        width: 50%;
+        padding: 0.2rem 0.3rem;
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
+    .container-join .bloco-email button{
+
+        padding: 0.1rem 0.3rem;
+    }
+}

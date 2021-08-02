@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    color: var(--secondary-color);
+    font-family: 'Poppins',sans-serif;
+    font-size: 0.8rem;
+}
+
+.terms span{
+    padding: 0 1rem;
+    color: gray;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .footer{
+        font-size: 0.4rem;
+    }
+
+    .terms span{
+        padding: 0 0.5rem 0 0;
+    }
+}

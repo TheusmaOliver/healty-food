@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#blog{
+    height: 100vh;
+    width: 90%;
+    color: var(--secondary-color);
+    margin: 0 0 0 auto;
+}
+
+#blog h2{
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: bolder;
+}
+
+#blog p{
+    margin: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.center{
+    margin-top: 2rem;
+}
+
+.cards{
+    height: 400px;
+}
+
+
+.card-wraper{
+    width: 80%;
+    background-color: white;
+   border-radius: 0.2rem;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.card-wraper .imagem-blog{
+    width: 100%;
+}
+
+.card-wraper .info{
+    padding: 1.5rem;
+}
+
+.card-wraper h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.info .social{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.info .imagem-perfil{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.info span{
+    font-size: 0.8rem;
+    color: gray;
+    font-family: 'Poppins',sans-serif;
+}
+
+@media(max-width:768px){
+    #blog{
+        height: 80vh;
+        width: 100%;
+    }
+    .card-wraper{
+        width:90%;
+        height: 40%;
+    }
+    .card-wraper .info{
+        padding: 0.3rem;
+    }
+    .card-wraper h3{
+        font-size: 0.5rem;
+    }
+  
+    .info .imagem-perfil{
+        width: 25px;
+    }
+
+    .info span{
+        font-size: 0.4rem;
+    }
+}

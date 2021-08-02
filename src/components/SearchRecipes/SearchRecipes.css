@@ -1,0 +1,62 @@
+
+.search-recipe {
+  margin-top: 5rem;
+}
+
+.texto {
+  width: 35%;
+  padding: 2rem 2rem 0;
+}
+
+.texto p {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.search {
+  padding: 0 2rem;
+}
+
+.search input {
+  width: 30%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  margin-right: 1rem;
+}
+
+.search button {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.search .icon-search {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .texto {
+    width: 100%;
+  }
+  .texto p {
+    font-size: 1.5rem;
+  }
+
+  .search input {
+    width: 85%;
+    padding: 0.2rem 0.3rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+  }
+
+  .search button {
+    padding: 0.1rem 0.3rem;
+  }
+  .search .icon-search {
+    width: 1rem;
+  }
+}

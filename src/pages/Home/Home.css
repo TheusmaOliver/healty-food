@@ -1,0 +1,20 @@
+.Home {
+  height: 100vh;
+  background-image: url(../../assets/img/Illustration.svg);
+  background-size: 55%;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.Recipes,
+.Blog {
+  background-color: #e8f0f270;
+}
+
+
+
+@media (max-width: 768px) {
+  .Home {
+    background: none;
+  }
+}

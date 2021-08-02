@@ -1,0 +1,123 @@
+header{
+  height: 4.37rem;
+}
+
+h1 {
+  padding: 2rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+#btn-mobile{
+  display: none;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  padding: 1.5rem 0;
+}
+
+#menu li {
+  padding: 0.7rem 1.5rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#menu li a{
+  color: white;
+  text-decoration: none;
+}
+#menu li a:hover{
+  color: rgba(255, 255, 255, .8);
+}
+
+#menu li .link-register{
+  color: var(--primary-color);
+}
+
+
+#menu #register {
+  background-color: white;
+  
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+#menu #register:hover{
+  background-color: green;
+  
+}
+
+@media (max-width: 768px){
+  h1{
+    padding: 2rem 0 0 2rem;
+    font-size: 1.2rem;
+  }
+
+  .botao{
+    padding: 1.5rem 0 0 4rem;
+  }
+
+  #btn-mobile{
+    display: flex;
+    padding: 0.5rem 2rem;
+    
+    background: none;
+    border: none;
+    
+  }
+
+  #menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    background-color: var(--primary-color);
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .6s;
+    z-index: 1000;
+  }
+
+  #nav.active #menu{
+    visibility: visible;
+    height: calc(100vh - 4.37rem);
+  }
+  #menu li{
+    font-size: 0.8rem;
+    border-bottom: 2px solid var(--secondary-color);
+    margin: 0 2rem;
+  }
+  #menu li .link-register,
+  #menu li a{
+    color: black;
+    
+  }
+  #menu #register {
+    background: none;
+    border-radius: 0;
+  }
+
+  #hamburguer{
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburguer::after,
+  #hamburguer::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+  }
+
+
+}

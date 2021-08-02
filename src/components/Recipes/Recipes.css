@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#recipes{
+    height: 100vh;
+    color: var(--secondary-color);
+}
+#recipes h2{
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: bolder;
+}
+
+#recipes p{
+    margin: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.grid > .card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    box-shadow: 10px 10px 40px #bebebe,
+    -20px -20px 60px #ffffff;
+    border-radius: 0.5rem;
+    width: 33.75rem;
+}
+
+.text{
+    padding: 0 2rem;
+}
+
+.text h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.text button{
+    padding: 0.7rem 1.3rem;
+    border: none;
+    color: white;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+}
+
+@media (max-width:768px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1rem;
+        width: 70%;
+        margin: 2rem auto 0;
+    }
+    .grid > .card{
+        width: 250px;
+        height: 89px;
+    }
+
+    .grid > .card img{
+        width: 100px;
+    }
+    .text{
+        padding: 0 0.8rem;
+    }
+
+    .text h3{
+        font-size: 0.6rem;
+        
+    }
+
+    .text button{
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+    
+}

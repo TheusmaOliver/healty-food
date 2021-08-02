@@ -1,0 +1,17 @@
+.page-register{
+    background-image: url(../../assets/img/bloco_final_image.svg) ;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.page-register a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+@media (max-width:768px){
+    .page-register{
+        background: none;
+    }
+}
