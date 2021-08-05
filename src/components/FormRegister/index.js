@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import './FormRegister.css';
 import schema from '../../utils/schema';
 
 
 function FormRegister(){
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+    const [message,setMessage] = useState("")
 
 
     function onBlurCep(event, setFieldValue){
@@ -31,12 +32,10 @@ function FormRegister(){
     }
 
     function onSubmit(values,onSubmitProps){
-        const success = document.getElementById('success')
         users.push(values)
         localStorage.setItem('users',JSON.stringify(users))
         onSubmitProps.resetForm();
-        success.classList.add('sucesso')
-        success.innerHTML = '<span>Cadastro efetuado com sucesso!</span>'
+        setMessage('Cadastro efetuado com sucesso!')
     }
 
     return(
@@ -60,64 +59,64 @@ function FormRegister(){
                 render={({ values, setFieldValue })=>(
 
                     <Form >
-                        <span id='success'></span>
+                        <span id='success'>{message}</span>
                         <div>
 
-                        <div className='form-group'>
-                            <label htmlFor="name">Nome</label>
-                            <Field  id="name" name="name" />
-                            <ErrorMessage name="name" />
-                        </div>
-
-                        <div className='form-group'>
-                            <label htmlFor="data">Data de nascimento</label>
-                            <Field  id="data" name="data" type='date' />
-                            <ErrorMessage name="data" />
-                        </div>
-
-                        <div className='form-group'>
-                            <label htmlFor="cpf">CPF</label>
-                            <Field  id="cpf" name="cpf" />
-                            <ErrorMessage name="cpf" />
-                        </div>
-
-                        <div className='addres'>
                             <div className='form-group'>
-                                <label htmlFor="cep">CEP</label>
-                                <Field  id="cep" name="cep"  onBlur={(event)=> onBlurCep(event,setFieldValue)} />
-                                <ErrorMessage name="cep" />
-                            </div>
-
-                            <div className='coluna'>
-                                <div className='form-group'>
-                                    <label htmlFor="log">Logradouro</label>
-                                    <Field  id="log" name="log" />
-                                    <ErrorMessage name="log" />
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor="bairro">Bairro</label>
-                                    <Field  id="bairro" name="bairro"  />
-                                    <ErrorMessage name="bairro" />
-                                </div>
+                                <label htmlFor="name">Nome</label>
+                                <Field  id="name" name="name" />
+                                <ErrorMessage name="name" />
                             </div>
 
                             <div className='form-group'>
-                                <label htmlFor="complemento">Complemento</label>
-                                <Field  id="complemento" name="complemento"  />
+                                <label htmlFor="data">Data de nascimento</label>
+                                <Field  id="data" name="data" type='date' />
+                                <ErrorMessage name="data" />
                             </div>
-                            <div className='coluna'>
+
+                            <div className='form-group'>
+                                <label htmlFor="cpf">CPF</label>
+                                <Field  id="cpf" name="cpf" />
+                                <ErrorMessage name="cpf" />
+                            </div>
+
+                            <div className='addres'>
                                 <div className='form-group'>
-                                    <label htmlFor="cidade">Cidade</label>
-                                    <Field  id="cidade" name="cidade"  />
-                                    <ErrorMessage name="cidade" />
+                                    <label htmlFor="cep">CEP</label>
+                                    <Field  id="cep" name="cep"  onBlur={(event)=> onBlurCep(event,setFieldValue)} />
+                                    <ErrorMessage name="cep" />
                                 </div>
+
+                                <div className='coluna'>
+                                    <div className='form-group'>
+                                        <label htmlFor="log">Logradouro</label>
+                                        <Field  id="log" name="log" />
+                                        <ErrorMessage name="log" />
+                                    </div>
+                                    <div className='form-group'>
+                                        <label htmlFor="bairro">Bairro</label>
+                                        <Field  id="bairro" name="bairro"  />
+                                        <ErrorMessage name="bairro" />
+                                    </div>
+                                </div>
+
                                 <div className='form-group'>
-                                    <label htmlFor="uf">Uf</label>
-                                    <Field  id="uf" name="uf"  />
-                                    <ErrorMessage name="uf" />
+                                    <label htmlFor="complemento">Complemento</label>
+                                    <Field  id="complemento" name="complemento"  />
+                                </div>
+                                <div className='coluna'>
+                                    <div className='form-group'>
+                                        <label htmlFor="cidade">Cidade</label>
+                                        <Field  id="cidade" name="cidade"  />
+                                        <ErrorMessage name="cidade" />
+                                    </div>
+                                    <div className='form-group'>
+                                        <label htmlFor="uf">Uf</label>
+                                        <Field  id="uf" name="uf"  />
+                                        <ErrorMessage name="uf" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                         
                         <input className='button' type="submit" value="Enviar" />
