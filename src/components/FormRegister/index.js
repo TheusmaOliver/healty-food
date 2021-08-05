@@ -8,6 +8,7 @@ function FormRegister(){
     const users = JSON.parse(localStorage.getItem('users')) || [];
     
     const [message,setMessage] = useState("")
+    const [changeSpan, setChangeSpan] = useState(false)
 
 
     function onBlurCep(event, setFieldValue){
@@ -31,10 +32,12 @@ function FormRegister(){
 
     }
 
+   
     function onSubmit(values,onSubmitProps){
         users.push(values)
         localStorage.setItem('users',JSON.stringify(users))
         onSubmitProps.resetForm();
+        setChangeSpan(true)
         setMessage('Cadastro efetuado com sucesso!')
     }
 
@@ -59,7 +62,7 @@ function FormRegister(){
                 render={({ values, setFieldValue })=>(
 
                     <Form >
-                        <span id='success'>{message}</span>
+                        <span className={ changeSpan ? 'success' : '' }>{message}</span>
                         <div>
 
                             <div className='form-group'>
@@ -119,7 +122,7 @@ function FormRegister(){
                             </div>
                         </div>
                         
-                        <input className='button' type="submit" value="Enviar" />
+                        <input className='button' type="submit"  value="Enviar" />
                     </Form>
                 )}
             />

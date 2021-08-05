@@ -1,13 +1,14 @@
 import './Header.css';
 import {  Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 function Header() {
+  const [active,setActive] = useState(false)
 
   const toggle =()=>{
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('active')
+    setActive(!active)
   }
 
   return (
@@ -23,7 +24,7 @@ function Header() {
             </button>
             
           </div>
-          <nav id="nav">
+          <nav id="nav" className={ active ? 'active' : ''}>
             <ul id="menu">
               <li><a href='#recipes'>HEALTHY RECIPES</a></li>
               <li><a href='#blog'>BLOG</a></li>
